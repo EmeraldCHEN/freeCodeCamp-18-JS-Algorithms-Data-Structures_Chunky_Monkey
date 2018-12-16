@@ -37,7 +37,19 @@ function chunkArrayInGroups2(arr, size) {
 
 
 
+/*****  Solution #3  *******************************************************************************************************/
 
+function chunkArrayInGroups3(arr, size) {
+    
+      if (arr.length <= size){
+          return [arr];
+      }
+      else {
+          // For any array larger than size, it’s splited in two. 
+          // First segment is nested and concatnated with second segment which makes a recursive call.
+          return [arr.slice(0,size)].concat(chunkArrayInGroups(arr.slice(size),size));
+      }
+}
 
 
 // Retrieved from
