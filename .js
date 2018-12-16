@@ -52,6 +52,27 @@ function chunkArrayInGroups3(arr, size) {
 }
 
 
+
+
+/*****  Solution #4  *******************************************************************************************************/
+
+
+function chunkArrayInGroups4(arr, size) {
+    for (var a = 0; a < arr.length; a++) {
+        if (a % size !== size - 1)  //  push to temp using temp.push(arr[a]) if the remainder of a/size is not equal to size-1
+           temp.push(arr[a]);
+        else {
+           temp.push(arr[a]);
+           result.push(temp);
+           temp = [];
+        }
+    }
+    if (temp.length !== 0)
+        result.push(temp);
+    return result;
+    }
+}
+
 // Retrieved from
 // https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/
 
