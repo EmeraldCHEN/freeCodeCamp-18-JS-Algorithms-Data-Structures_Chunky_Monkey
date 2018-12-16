@@ -1,15 +1,15 @@
 
 function chunkArrayInGroups(arr, size) {
     
-    let newArr = []; // create an empty array newArr where will store our ‘chunks’.
+    let newArr = []; // create an empty array newArr where will store our ‘chunks’
 
     let i = 0;
 
     while(i < arr.length){
         
-        let slicedArr = arr.slice(i, i+size);   
+        let chunk = arr.slice(i, i+size);   // create each chunk using arr.slice()
 
-        newArr.push(slicedArr);
+        newArr.push(chunk); // add the chunk to newArr with newArr.push().
 
         i += size;
     }
