@@ -1,5 +1,7 @@
 
-function chunkArrayInGroups(arr, size) {
+/*****  Solution #1  *******************************************************************************************************/
+
+function chunkArrayInGroups1(arr, size) {
     
     let newArr = []; // create an empty array newArr where will store our ‘chunks’
 
@@ -16,7 +18,24 @@ function chunkArrayInGroups(arr, size) {
     return newArr;    
 }
 
-chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4); // return [[0, 1, 2, 3], [4, 5, 6, 7], [8]]
+chunkArrayInGroups1([0, 1, 2, 3, 4, 5, 6, 7, 8], 4); // return [[0, 1, 2, 3], [4, 5, 6, 7], [8]]
+
+
+
+/*****  Solution #2  *******************************************************************************************************/
+
+function chunkArrayInGroups2(arr, size) {
+    let newArr = [];
+    
+    while (arr.length) {
+        
+        newArr.push(arr.splice(0,size));  // push to the newArr array using arr.splice(0, size)
+                                          // for each iteration of while loop, it deletes size number of elements from arr and push them as an array to newArr.
+    }
+    console.log(newArr);
+  }
+
+
 
 
 
