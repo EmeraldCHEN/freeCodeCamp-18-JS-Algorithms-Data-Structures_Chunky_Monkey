@@ -42,7 +42,7 @@ function chunkArrayInGroups2(arr, size) {
 function chunkArrayInGroups3(arr, size) {
     
       if (arr.length <= size){
-          return [arr];
+          return [arr];  // can not return arr as the required result is a two-dimensional array
       }
       else {
           // For any array larger than size, it’s splited in two. 
